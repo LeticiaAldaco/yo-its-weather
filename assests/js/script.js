@@ -7,4 +7,4 @@ var forecastUrl = "api.openweathermap.org/data/2.5/forecast?q=";
 
 // Create the variable to grab the city name from the input 
 
-// Creat function for current weather API call with city peramater
+// Create function for current weather API call with city parameter
