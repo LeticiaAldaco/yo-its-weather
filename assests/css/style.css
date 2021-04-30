@@ -7,7 +7,7 @@ body {
 main {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: max-content 1fr;
+    grid-template-rows: max-content repeat(2, 1fr);
     gap: 8px;
     height: 100%;
 }
@@ -26,11 +26,43 @@ header {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
+    grid-row-start: span 2;
 }
 
 hr {
     border-color: black;
     width: 100%;
     gap:8px;
+
+}
+
+.weatherInfo, .dayOne, .dayTwo, .dayThree, .dayFour, .dayFive {
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 8px;
+}
+
+.fiveDay {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: max-content 1fr;
+    grid-column-gap: 25px;
+}
+
+.dayOne, .dayTwo, .dayThree, .dayFour, .dayFive {
+    border: none;
+    background-color: #33475A;
+    color: white;
+    border-radius: 2px;
+
+} 
+
+.fiveDayTitle {
+    grid-column-start: span 5;
 
 }
