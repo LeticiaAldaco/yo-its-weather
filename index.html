@@ -10,7 +10,7 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assests/css/style.css" />
+    <script src="https://momentjs.com/downloads/moment.js"></script>    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Yo-its-Weather</title>
   </head>
   <body>
@@ -18,9 +18,10 @@
       <header>Weather Dashboard</header>
       <div class="side-bar">
         <h2>Search for a City:</h2>
-        <input type="text" placeholder="Enter City" name="search" />
-        <button type="button" class="btn btn-primary">Search</button>
-
+        <form id="cityName">
+          <input type="text" id="cityNameInput" />
+          <button type="submit">Enter</button>
+        </form>
         <hr />
         <button type="button" class="btn btn-secondary">Austin</button>
         <button type="button" class="btn btn-secondary">Chicago</button>
@@ -35,11 +36,11 @@
       </div>
 
       <div class="weatherInfo">
-        <h2>Atlanta (3/30/2021)</h2>
-        <h5>Temp: 74.01</h5>
-        <h5>Wind: 6.67 MPH</h5>
-        <h5>Humidity: 46 %</h5>
-        <h5>UV Index:</h5>
+        <h2 id="cityHeader"></h2>
+        <h5 id="cityTemp"></h5>
+        <h5 id="cityWind"></h5>
+        <h5 id="cityHumid"></h5>
+        <h5 id="uvInfo"></h5>
       </div>
 
       <div class="fiveDay">
@@ -52,35 +53,36 @@
           <p>Humidity:</p>
         </div>
         <div class="dayTwo">
-            <h5>4/1/2021</h5>
-            <!-- pull from js for img -->
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-          </div>
-          <div class="dayThree">
-            <h5>4/2/2021</h5>
-            <!-- pull from js for img -->
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-          </div>
-          <div class="dayFour">
-            <h5>4/3/2021</h5>
-            <!-- pull from js for img -->
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-          </div>
-          <div class="dayFive">
-            <h5>4/4/2021</h5>
-            <!-- pull from js for img -->
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-          </div>
+          <h5>4/1/2021</h5>
+          <!-- pull from js for img -->
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity:</p>
+        </div>
+        <div class="dayThree">
+          <h5>4/2/2021</h5>
+          <!-- pull from js for img -->
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity:</p>
+        </div>
+        <div class="dayFour">
+          <h5>4/3/2021</h5>
+          <!-- pull from js for img -->
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity:</p>
+        </div>
+        <div class="dayFive">
+          <h5>4/4/2021</h5>
+          <!-- pull from js for img -->
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity:</p>
+        </div>
       </div>
     </main>
+    <script src="./assets/js/script.js"></script>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
