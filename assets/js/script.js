@@ -37,33 +37,42 @@ function renderCurrentWeather(data) {
   cityTemp.textContent = "Temp: " + data.main.temp;
   cityWind.textContent = "Wind: " + data.wind.speed + " MPH";
   cityHumid.textContent = "Humidity: " + data.main.humidity + "%";
-  uvInfo.textContent = "UV Index: ";
   console.log(data);
   cityHeader.textContent = data.name + " - " + moment().format("MMMM Do YYYY");
   fetch(
-    "https://api.openweathermap.org/data/2.5/onecall?lat=" +
+    "https://api.openweathermap.org/data/2.5/uvi?lat=" +
       data.coord.lat +
       "&lon=" +
       data.coord.lon +
+      "&appid=" +
       apiKey
   )
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      //  console.log(data);
+       console.log(data);
+       uvInfo.textContent = "UV Index: " + data.value;
+
     });
 }
 function renderFivedayForecast(data) {
   fetch(
-    `api.openweathermap.org/data/2.5/forecast?q=${data.name}&appid=${apiKey}&units=imperial`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&appid=${apiKey}&units=imperial`
   )
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      
+      console.log(data);
+      for(let i = 1; i< 6; i ++){
+       let divId = $("div#" + i)
+divId.children()[0].innerHTML = data.list[(i*8)-1].dt_txt.split(" ")[0];
+divId.children()[1].innerHTML = data.list[(i*8)-1].weather.icon;
+// divID.children()
+      }
     });
+//     document.querySelector("#");
 }
 
 form.addEventListener("submit", returnCityInfo);
