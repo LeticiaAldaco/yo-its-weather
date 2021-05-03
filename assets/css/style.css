@@ -2,6 +2,7 @@ body {
     height: 100vh;
     width: 100vw;
     padding: 20px 10%;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
 }
 
 main {
@@ -40,11 +41,28 @@ hr {
     border: black;
     border-width: 1px;
     border-style: solid;
-    border-radius: 2px;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding-left: 8px;
+    color: black;
+    /* box-shadow: white; */
+}
+
+.weatherInfo {
+    text-shadow: 2px 2px white;
+
+}
+#topIcon {
+   width: 100px;
+   height: 100px;
+}
+
+.weatherIcons {
+    width: 50px;
+    height: 50px;
+    display: none;
 }
 
 .fiveDay {
@@ -65,4 +83,19 @@ hr {
 .fiveDayTitle {
     grid-column-start: span 5;
 
+}
+
+.favorable {
+    color: green;
+    background-color: black;
+}
+
+.moderate {
+    color: yellow;
+    background-color: black;
+}
+
+.severe {
+    color: red;
+    background-color: black;
 }
