@@ -13,7 +13,8 @@ The purpose of this application is to show you the current weather and 5-Day For
 * Open Weather API
 
 ## Preview
-![Screen Shot](/Users/leticiaaldaco/Desktop/code/yo-its-weather/Yo-Its-Weather-Dashboard.png)
+<img width="1440" alt="Screen Shot 2021-05-02 at 9 11 36 PM" src="https://user-images.githubusercontent.com/80429282/116837603-bed1e880-ab90-11eb-97ec-9ca519e8b1a0.png">
+
 ## Link: 
 
 
